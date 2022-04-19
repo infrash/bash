@@ -38,7 +38,7 @@ lub na serwerze FTP
 
 #### prepare input data
 
-/example/domain-list.txt
+1/domain-list.txt
 ```
 example1.com
 example2.com
@@ -46,7 +46,7 @@ example3.com
 ```
 
 ```bash
-create-input-csv.sh "domain,https_status" /example/domain-list.txt /1/in.csv
+create-input-csv.sh "domain,https_status" 1/domain-list.txt 1/in.csv
 ```
 
 
