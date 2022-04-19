@@ -46,11 +46,11 @@ example3.com
 ```
 
 ```bash
-create-input-csv.sh "domain,nameservers" /example/domain-list.txt /1/in.csv
+create-input-csv.sh "domain,https_status" /example/domain-list.txt /1/in.csv
 ```
 
 
-#### load output data  
+#### load output data: out.csv  
 
 ```bash
 load.sh 1/in.csv 1/out.csv 1/status.csv
