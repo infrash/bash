@@ -9,14 +9,18 @@ bash scripts: compare, load, status to create csv answer
 + load ( from infrastructure )
 
 ## compare
+
 values from in and current infrastructure
+
 ```bash
 compare.sh
 ```
 
 
 ## load
+
 load values from infrastructure
+
 ```bash
 load.sh
 ```
@@ -31,8 +35,16 @@ lub na serwerze FTP
 
 ### START
 
+prepare input data
+
 ```bash
-compare.sh 1/in.csv 1/out.csv 1/status.csv
+create-input-csv.sh "domain.nameservers" /example/domain-list.txt /1/in.csv
+```
+
+load output data  
+
+```bash
+load.sh 1/in.csv 1/out.csv 1/status.csv
 ```
 
 ### IN
