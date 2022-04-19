@@ -34,23 +34,34 @@ load.sh
 wszystkie dane są dostepne poprzez mikrousluge
 lub na serwerze FTP
 
-### START
+## START
 
-#### prepare input data
+### prepare input data
 
-1/domain-list.txt
-```
++ 1/domain-list.txt
+
+```txt
 example1.com
 example2.com
 example3.com
 ```
 
++ run script to create the in.csv file
+
 ```bash
 create-input-csv.sh "domain,https_status" 1/domain-list.txt 1/in.csv
 ```
 
++ output of script: 1/in.csv
 
-#### load output data: out.csv  
+```csv
+domain,https_status
+example1.com
+example2.com
+example3.com
+```
+
+### load output data: out.csv  
 
 ```bash
 load.sh 1/in.csv 1/out.csv 1/status.csv
@@ -59,14 +70,7 @@ load.sh 1/in.csv 1/out.csv 1/status.csv
 ### IN
 dane wejsciowe
 
-+ in.csv
 
-```csv
-domain,https_status
-example1.com
-example2.com
-example3.com
-```
 
 ### STATUS OUT
 status wykonyuwania, aktualizowany po kazdej iteracji
