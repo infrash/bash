@@ -35,12 +35,12 @@ echo $HEADERS > $OUT
 
 
 OBJECT_LIST=$(cat $IN)
-
+# sh load/http_status_code.sh https://softreck.com
 for object in $OBJECT_LIST
 do
    echo $object
    url="https://$object"
-   RUN=$(sh load/http_status.sh $url)
-   echo $RUN >> $OUT
-
+   CMD="http_status_code"
+   RUN=$(sh load/${CMD}.sh $url)
+   [[ $RUN != "000" ]] &&  echo $RUN >> $OUT
 done
