@@ -118,17 +118,42 @@ Dane wyjsciowe:
 
 ```csv
 domain,nameservers
-example1.com,ns1.com,ns2.com,ns3.com,/home/user/example1.com.png 
-example2.com,ns1.com,ns2.com,ns3.com,/home/user/example1.com.png
-example3.com,ns1.com,ns2.com,ns3.com,/home/user/example1.com.png
+example1.com,ns1.com,ns2.com,ns3.com 
+example2.com,ns1.com,ns2.com,ns3.com
+example3.com,ns1.com,ns2.com,ns3.com
 ```
 
-## 3. Compare nameservers for domain list
+
+## 3. Load nameservers for domain list
+
+Another example with making screenshots
+
+Dane wejsciowe:
++ 3/in.csv
+
+```csv
+domain,nameservers
+example1.com
+example2.com
+example3.com
+```
+
+Dane wyjsciowe:
++ 3/out.csv
+
+```csv
+domain,nameservers
+example1.com,/home/user/example1.com.png 
+example2.com,/home/user/example1.com.png
+example3.com,/home/user/example1.com.png
+```
+
+## 4. Compare nameservers for domain list
 
 Dane wyjsciowe mogą posłużyć do sprawdzenia stanu:
 
 Dane wejsciowe:
-+ 3/in.csv
++ 4/in.csv
 
 ```csv
 domain,nameservers
@@ -139,11 +164,11 @@ example3.com,ns1.com,ns2.com,ns3.com
 
 
 Dane wyjsciowe:
-+ 3/out.csv
++ 4/out.csv
 
 ```csv
 domain,nameservers
-example1.com,ns1.com,ns2.com,ns3.com,/home/user/example1.com.png 
-example2.com,ns1.com,ns2.com,ns3.com,/home/user/example1.com.png
-example3.com,ns1.com,ns2.com,ns3.com,/home/user/example1.com.png
+example1.com,ns1.com,ns2.com,ns3.com 
+example2.com,ns1.com,ns2.com,ns3.com
+example3.com,ns1.com,ns2.com,ns3.com
 ```
