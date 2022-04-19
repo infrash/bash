@@ -14,7 +14,7 @@ bash scripts: compare, load, status to create csv answer
 values from in and current infrastructure
 
 ```bash
-compare.sh
+./compare.sh
 ```
 
 
@@ -23,7 +23,7 @@ compare.sh
 load values from infrastructure
 
 ```bash
-load.sh
+./load.sh
 ```
 
 
@@ -49,7 +49,7 @@ run script to create the input file
 + 1/in.csv 
 
 ```bash
-create-input-csv.sh "domain,https_status" 1/domain-list.txt 1/in.csv
+./create-input-csv.sh "domain,https_status" "1/domain-list.txt" "1/in.csv"
 ```
 
 output of script:
@@ -65,7 +65,7 @@ example3.com
 ### 1. Load status of domains
 
 ```bash
-load.sh 1/in.csv 1/out.csv 1/status.csv
+./load.sh "1/in.csv" "1/out.csv" "1/status.csv"
 ```
 
 dane wejsciowe: 
