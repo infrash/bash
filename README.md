@@ -36,13 +36,21 @@ lub na serwerze FTP
 
 ### START
 
-prepare input data
+#### prepare input data
 
-```bash
-create-input-csv.sh "domain.nameservers" /example/domain-list.txt /1/in.csv
+/example/domain-list.txt
+```
+example1.com
+example2.com
+example3.com
 ```
 
-load output data  
+```bash
+create-input-csv.sh "domain,nameservers" /example/domain-list.txt /1/in.csv
+```
+
+
+#### load output data  
 
 ```bash
 load.sh 1/in.csv 1/out.csv 1/status.csv
