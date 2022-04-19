@@ -101,18 +101,21 @@ example3.com,200
 
 ## 2. Load nameservers for domain list
 
+Another example with checking nameservers
+
 Dane wejsciowe:
 + 2/in.csv
 
 ```csv
 domain,nameservers
-example1.com,
-example2.com,
-example3.com,
+example1.com
+example2.com
+example3.com
 ```
 
 Dane wyjsciowe:
 + 2/out.csv
+
 ```csv
 domain,nameservers
 example1.com,ns1.com,ns2.com,ns3.com,/home/user/example1.com.png 
