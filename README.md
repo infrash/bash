@@ -62,7 +62,7 @@ example2.com
 example3.com
 ```
 
-### load output data: out.csv  
+### 1. Load status of domains
 
 ```bash
 load.sh 1/in.csv 1/out.csv 1/status.csv
@@ -99,6 +99,20 @@ example2.com,500
 example3.com,200
 ```
 
+## 2. Load nameservers for domain list
+
+Dane wejsciowe:
++ 2/in.csv
+
+```csv
+domain,nameservers
+example1.com,
+example2.com,
+example3.com,
+```
+
+Dane wyjsciowe:
++ 2/out.csv
 ```csv
 domain,nameservers
 example1.com,ns1.com,ns2.com,ns3.com,/home/user/example1.com.png 
@@ -106,10 +120,13 @@ example2.com,ns1.com,ns2.com,ns3.com,/home/user/example1.com.png
 example3.com,ns1.com,ns2.com,ns3.com,/home/user/example1.com.png
 ```
 
+## 3. Compare nameservers for domain list
+
 Dane wyjsciowe mogą posłużyć do sprawdzenia stanu:
 
-### DATA IN
-Dane wejsciowe
+Dane wejsciowe:
++ 3/in.csv
+
 ```csv
 domain,nameservers
 example1.com,ns1.com,ns2.com,ns3.com
@@ -117,8 +134,10 @@ example2.com,ns1.com,ns2.com,ns3.com
 example3.com,ns1.com,ns2.com,ns3.com
 ```
 
-### DATA OUT
-Dane wyjsciowe
+
+Dane wyjsciowe:
++ 3/out.csv
+
 ```csv
 domain,nameservers
 example1.com,ns1.com,ns2.com,ns3.com,/home/user/example1.com.png 
