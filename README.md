@@ -54,7 +54,7 @@ dane wejsciowe
 + in.csv
 
 ```csv
-domain,https_status,screenshot_png
+domain,https_status
 example1.com
 example2.com
 example3.com
@@ -66,16 +66,23 @@ status wykonyuwania, aktualizowany po kazdej iteracji
 + status.csv
 
 ```csv
-domain,https_status,screenshot_png
-example1.com
-example2.com
-example3.com
+domain,https_status
+example1.com,done
+example2.com,warning
+example3.com,
 ```
 
 ### DATA OUT
 Dane wyjsciowe
 
 + out.csv
+
+```csv
+domain,https_status
+example1.com,200
+example2.com,500
+example3.com,200
+```
 
 ```csv
 domain,nameservers
