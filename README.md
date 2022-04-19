@@ -36,8 +36,7 @@ lub na serwerze FTP
 
 ## START
 
-### prepare input data
-
+prepare input data
 + 1/domain-list.txt
 
 ```txt
@@ -46,13 +45,15 @@ example2.com
 example3.com
 ```
 
-+ run script to create the in.csv file
+run script to create the input file 
++ 1/in.csv 
 
 ```bash
 create-input-csv.sh "domain,https_status" 1/domain-list.txt 1/in.csv
 ```
 
-+ output of script: 1/in.csv
+output of script:
++ 1/in.csv
 
 ```csv
 domain,https_status
@@ -67,15 +68,18 @@ example3.com
 load.sh 1/in.csv 1/out.csv 1/status.csv
 ```
 
-### IN
-dane wejsciowe
+dane wejsciowe: 
++ 1/in.csv
 
+```csv
+domain,https_status
+example1.com
+example2.com
+example3.com
+```
 
-
-### STATUS OUT
-status wykonyuwania, aktualizowany po kazdej iteracji
-
-+ status.csv
+status wykonywania, aktualizowany po każdej iteracji: 
++ 1/status.csv
 
 ```csv
 domain,https_status
@@ -84,10 +88,9 @@ example2.com,warning
 example3.com,
 ```
 
-### DATA OUT
-Dane wyjsciowe
 
-+ out.csv
+Dane wyjściowe:
++ 1/out.csv
 
 ```csv
 domain,https_status
