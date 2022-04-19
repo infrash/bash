@@ -29,18 +29,27 @@ STATUS=$3
 
 ## Save
 #cat $IN > $OUT
-HEADERS="domain,http_status"
+HEADERS="domain,http_status_code"
 
 echo $HEADERS > $OUT
-
+i=0
 
 OBJECT_LIST=$(cat $IN)
 # sh load/http_status_code.sh https://softreck.com
 for object in $OBJECT_LIST
 do
-   echo $object
-   url="https://$object"
+  ((i++))
+  [ $i = 1 ] && continue
+   URL="https://$object"
+   #url="$object"
    CMD="http_status_code"
-   RUN=$(sh load/${CMD}.sh $url)
-   [[ $RUN != "000" ]] &&  echo $RUN >> $OUT
+   RUNS="./load/${CMD}.sh ${URL}"
+   #echo $RUNS
+   RUN=$($RUNS)
+   #echo $RUN
+   LINE="$object,$RUN"
+   echo $LINE
+   #[[ $RUN != "000" ]] &&
+   sleep 2
+   echo $LINE >> $OUT
 done
